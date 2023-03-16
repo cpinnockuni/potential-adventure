@@ -1,0 +1,111 @@
+
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>FRESH START|| Helping Students Connect</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<div class="hero">
+    <div class="hero-inner">
+      
+        <div class="navbar">
+          
+          <div class="logo">FRESH
+            <span class="col-primary">START//</span>
+          </div>
+          
+          <div class="col-primary" id="toggle">
+            <svg width="35" height="35" fill="none" stroke-linecap="round" stroke-   linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </div>
+          
+        </div>
+
+        <!--DIGITAL PLATFORM TO ASSIT FRESHERS-->
+      
+      <div class="hero-content">
+        <div class="circle"></div>
+        <h1 class="hero-title">Digital<br>Platform<br> to assist <br>
+         
+            <span class="underline-box">
+            <span>Freshers</span>
+            <span class="underline"></span>
+          </span>
+        </h1>
+       
+      </div>
+      
+      <div class="hero-menu hide" id="menu">
+         <div class="navbar">
+          
+          <div class="logo col-white">FRESH
+            <span class="col-white">START//</span>
+          </div>
+          
+          <div class="col-white" id="close">
+           <svg width="30" height="30" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+          </div>
+          
+        </div>
+        <div class="hero-menu-navigation">
+     <ul>
+
+      <li>
+        <div><a href="{% url 'community' %}" class="hero-menu-link"> Community</a></div>
+      </li>
+      <li>
+        <div><a href="{% url 'information' %}" class="hero-menu-link">Information</a></div>
+      
+      </li>
+      <li>
+        <div><a href="{% url 'services' %}" class="hero-menu-link">Services</a></div>
+      </li>
+      <li>
+        <div><a href="{% url 'howto' %}" class="hero-menu-link">How to</a></div>
+      </li>
+      <li>
+        <div><a href="{% url 'studentlife' %}" class="hero-menu-link">Student Life</a></div>
+      </li>
+      <li>
+        <div><a href="{% url 'login_view' %}" class="hero-menu-link">Login</a></div>
+      </li>
+      <li>
+        <div><a href="{% url 'register' %}" class="hero-menu-link">Register</a></div>
+      </li>
+     </ul>
+         
+         
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  {% block content %}{% endblock %}
+
+  {% include 'Footer/Footer.html' %}
+
+<script>
+let toggle = document.getElementById('toggle');
+let close = document.getElementById('close');
+let menu = document.getElementById('menu');
+
+toggle.addEventListener('click', function() {
+  menu.classList.remove('hide');
+});
+
+close.addEventListener('click', function() {
+  menu.classList.add('hide');
+});
+
+
+</script>
+
+
+  </html>
+
